@@ -1,4 +1,6 @@
-﻿namespace PatternBuilderEducationTests
+﻿using System.Threading.Tasks;
+
+namespace PatternBuilderEducationTests
 {
     public class CookerDirector
     {
@@ -9,24 +11,20 @@
             Burger = burger;
         }
 
-        public void BildBurger()
+        public async Task BildBurger()
         {
-            Parallel.Invoke(
-                () => Burger.SetBun(),
-                () => Burger.SetCutletBeef(),
-                () => Burger.SetSauceKetchap(),
-                () => Burger.SetSauceMustard(),
-                () => Burger.SetLettuceLeaves(),
-                () => Burger.SetCucumbers(),
-                () => Burger.SetTomatoes(),
-                () => Burger.SetOnion()
-                );
+            Task[]? taskBurger = new Task[] {
+                Task.Factory.StartNew(() => Burger.SetBun()),
+                Task.Factory.StartNew(() => Burger.SetCutletBeef()),
+                Task.Factory.StartNew(() => Burger.SetSauceKetchap()),
+                Task.Factory.StartNew(() => Burger.SetSauceMustard()),
+                Task.Factory.StartNew(() => Burger.SetLettuceLeaves()),
+                Task.Factory.StartNew(() => Burger.SetCucumbers()),
+                Task.Factory.StartNew(() => Burger.SetTomatoes()),
+                Task.Factory.StartNew(() => Burger.SetOnion())
+            };
 
-
-
-
-
-
+            Task.WaitAll(taskBurger); // ожидаем завершения всех задач
 
 
         }
