@@ -17,7 +17,7 @@ namespace PatternBuilderEducationTests
             StringBuilder sb = new StringBuilder();
 
             if (Bun != null)
-                sb.Append("Булка: " + Bun.Sort + " Форма: " + Bun.Form + "\n");
+                sb.Append("Булка: " + Bun.Sort + ", Форма: " + Bun.Form + "\n");
             if (Sauce != null)
             {
                 foreach (Sauce s in Sauce)

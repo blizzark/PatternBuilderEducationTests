@@ -17,13 +17,14 @@ namespace PatternBuilderEducationTests
 
         public void BildBurger()
         {
-            Burger.SetBun();
-            Burger.SetCutlet();
-            Burger.SetSauce();
-            Burger.SetLettuceLeaves();
-            Burger.SetCucumbers();
-            Burger.SetTomatoes();
-            Burger.SetOnion();
+            Burger
+                .SetBun()
+                .SetCutlet()
+                .SetSauce()
+                .SetLettuceLeaves()
+                .SetCucumbers()
+                .SetTomatoes()
+                .SetOnion();
         }
 
 

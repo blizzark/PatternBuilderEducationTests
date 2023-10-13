@@ -2,13 +2,13 @@
 {
     public interface IBurgerBuilder
     {
-        public void SetBun();
-        public void SetSauce();
-        public void SetOnion();
-        public void SetLettuceLeaves();
-        public void SetCutlet();
-        public void SetCucumbers();
-        public void SetTomatoes();
+        public IBurgerBuilder SetBun();
+        public IBurgerBuilder SetSauce();
+        public IBurgerBuilder SetOnion();
+        public IBurgerBuilder SetLettuceLeaves();
+        public IBurgerBuilder SetCutlet();
+        public IBurgerBuilder SetCucumbers();
+        public IBurgerBuilder SetTomatoes();
 
         public Burger GetBurger();
     }

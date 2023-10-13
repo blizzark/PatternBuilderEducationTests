@@ -7,36 +7,49 @@
         {
             _burger = new();
         }
-        public void SetBun()
+        public IBurgerBuilder SetBun()
         {
             _burger.Bun = new() { Sort = "Белая", Form = "Круглая" };
+            return this;
         }
-        public void SetSauce()
+        public IBurgerBuilder SetSauce()
         {
             _burger.Sauce = new List<Sauce>() {
                 new Sauce() { Sort = "Горчица" },
                 new Sauce() { Sort = "Кетчуп" },
                 new Sauce() { Sort = "Майонез" }};
+            return this;
+
         }
-        public void SetOnion()
+        public IBurgerBuilder SetOnion()
         {
             _burger.Onion = new() { Sort = "Красный" };
+            return this;
+
         }
-        public void SetLettuceLeaves()
+        public IBurgerBuilder SetLettuceLeaves()
         {
             _burger.LettuceLeaves = new() { Sort = "Айсберг" };
+            return this;
+
         }
-        public void SetCutlet()
+        public IBurgerBuilder SetCutlet()
         {
             _burger.Cutlet = new() { Sort = "Говядина" };
+            return this;
+
         }
-        public void SetCucumbers()
+        public IBurgerBuilder SetCucumbers()
         {
             _burger.Cucumbers = new() { Sort = "Маринованные" };
+            return this;
+
         }
-        public void SetTomatoes()
+        public IBurgerBuilder SetTomatoes()
         {
             _burger.Tomatoes = new() { Sort = "Розовые" };
+            return this;
+
         }
 
         public Burger GetBurger()
