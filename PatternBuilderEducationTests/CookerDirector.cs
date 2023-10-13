@@ -19,8 +19,9 @@ namespace PatternBuilderEducationTests
         {
             Burger
                 .SetBun()
-                .SetCutlet()
-                .SetSauce()
+                .SetCutletBeef()
+                .SetSauceKetchap()
+                .SetSauceMustard()
                 .SetLettuceLeaves()
                 .SetCucumbers()
                 .SetTomatoes()

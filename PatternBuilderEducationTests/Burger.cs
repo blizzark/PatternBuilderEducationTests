@@ -4,14 +4,14 @@ namespace PatternBuilderEducationTests
 {
     public class Burger
     {
-        public List<Bun> Bun { get; set; }
-        public List<Sauce> Sauce { get; set; }
-        public List<Onion> Onion { get; set; }
-        public List<LettuceLeaves> LettuceLeaves { get; set; }
-        public List<Cheese> Cheese { get; set; }
-        public List<Cutlet> Cutlet { get; set; }
-        public List<Cucumbers> Cucumbers { get; set; }
-        public List<Tomatoes> Tomatoes { get; set; }
+        public List<Bun>? Bun { get; set; }
+        public List<Sauce>? Sauce { get; set; }
+        public List<Onion>? Onion { get; set; }
+        public List<LettuceLeaves>? LettuceLeaves { get; set; }
+        public List<Cheese>? Cheese { get; set; }
+        public List<Cutlet>? Cutlet { get; set; }
+        public List<Cucumbers>? Cucumbers { get; set; }
+        public List<Tomatoes>? Tomatoes { get; set; }
 
         public override string ToString()
         {
@@ -21,10 +21,8 @@ namespace PatternBuilderEducationTests
                 foreach (Bun s in Bun)
                     sb.Append("Булка: " + s.Sort + ", Форма: " + s.Form + "\n");
             if (Sauce != null)
-            {
                 foreach (Sauce s in Sauce)
                     sb.Append("Соус: " + s.Sort + "\n");
-            }
             if (Onion != null)
                 foreach (Onion s in Onion)
                     sb.Append("Лук: " + s.Sort + "\n");
