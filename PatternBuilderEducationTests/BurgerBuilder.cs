@@ -9,7 +9,7 @@
         }
         public IBurgerBuilder SetBun()
         {
-            _burger.Bun = new() { Sort = "Белая", Form = "Круглая" };
+            _burger.Bun = new() { new Bun { Sort = "Белая", Form = "Круглая" } };
             return this;
         }
         public IBurgerBuilder SetSauce()
@@ -23,31 +23,38 @@
         }
         public IBurgerBuilder SetOnion()
         {
-            _burger.Onion = new() { Sort = "Красный" };
+            _burger.Onion = new() { new Onion { Sort = "Красный" } };
             return this;
 
         }
         public IBurgerBuilder SetLettuceLeaves()
         {
-            _burger.LettuceLeaves = new() { Sort = "Айсберг" };
+            _burger.LettuceLeaves = new() { new LettuceLeaves { Sort = "Айсберг" } };
+            return this;
+
+        }
+
+        public IBurgerBuilder SetCheese()
+        {
+            _burger.Cheese = new() { new Cheese { Sort = "Пармезан" } };
             return this;
 
         }
         public IBurgerBuilder SetCutlet()
         {
-            _burger.Cutlet = new() { Sort = "Говядина" };
+            _burger.Cutlet = new() { new Cutlet { Sort = "Говядина" } };
             return this;
 
         }
         public IBurgerBuilder SetCucumbers()
         {
-            _burger.Cucumbers = new() { Sort = "Маринованные" };
+            _burger.Cucumbers = new() { new Cucumbers { Sort = "Маринованные" } };
             return this;
 
         }
         public IBurgerBuilder SetTomatoes()
         {
-            _burger.Tomatoes = new() { Sort = "Розовые" };
+            _burger.Tomatoes = new() { new Tomatoes { Sort = "Розовые" } };
             return this;
 
         }

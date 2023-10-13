@@ -4,38 +4,50 @@ namespace PatternBuilderEducationTests
 {
     public class Burger
     {
-        public Bun Bun { get; set; }
+        public List<Bun> Bun { get; set; }
         public List<Sauce> Sauce { get; set; }
-        public Onion Onion { get; set; }
-        public LettuceLeaves LettuceLeaves { get; set; }
-        public Cutlet Cutlet { get; set; }
-        public Cucumbers Cucumbers { get; set; }
-        public Tomatoes Tomatoes { get; set; }
+        public List<Onion> Onion { get; set; }
+        public List<LettuceLeaves> LettuceLeaves { get; set; }
+        public List<Cheese> Cheese { get; set; }
+        public List<Cutlet> Cutlet { get; set; }
+        public List<Cucumbers> Cucumbers { get; set; }
+        public List<Tomatoes> Tomatoes { get; set; }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
             if (Bun != null)
-                sb.Append("Булка: " + Bun.Sort + ", Форма: " + Bun.Form + "\n");
+                foreach (Bun s in Bun)
+                    sb.Append("Булка: " + s.Sort + ", Форма: " + s.Form + "\n");
             if (Sauce != null)
             {
                 foreach (Sauce s in Sauce)
                     sb.Append("Соус: " + s.Sort + "\n");
             }
             if (Onion != null)
-                sb.Append("Лук: " + Onion.Sort + "\n");
+                foreach (Onion s in Onion)
+                    sb.Append("Лук: " + s.Sort + "\n");
             if (LettuceLeaves != null)
-                sb.Append("Листья салата: " + LettuceLeaves.Sort + "\n");
+                foreach (LettuceLeaves s in LettuceLeaves)
+                    sb.Append("Листья салата: " + s.Sort + "\n");
             if (Cutlet != null)
-                sb.Append("Котлета: " + Cutlet.Sort + "\n");
+                foreach (Cutlet s in Cutlet)
+                    sb.Append("Котлета: " + s.Sort + "\n");
             if (Cucumbers != null)
-                sb.Append("Огурцы: " + Cucumbers.Sort + "\n");
+                foreach (Cucumbers s in Cucumbers)
+                    sb.Append("Огурцы: " + s.Sort + "\n");
             if (Tomatoes != null)
-                sb.Append("Томаты: " + Tomatoes.Sort + "\n");
+                foreach (Tomatoes s in Tomatoes)
+                    sb.Append("Томаты: " + s.Sort + "\n");
 
             return sb.ToString();
         }
+    }
+
+    public class Cheese
+    {
+        public string Sort { get; set; }
     }
 
     public class Sauce
