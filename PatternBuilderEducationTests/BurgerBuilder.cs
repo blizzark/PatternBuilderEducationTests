@@ -9,6 +9,7 @@
         }
         public IBurgerBuilder SetBun()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
             if (_burger.Bun == null)
                 _burger.Bun = new() { new Bun { Sort = "Белая", Form = "Круглая" } };
             else
@@ -18,6 +19,8 @@
         }
         public IBurgerBuilder SetSauceKetchap()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Sauce == null)
                 _burger.Sauce = new List<Sauce>() {new Sauce() { Sort = "Кетчуп" }};
             else
@@ -28,6 +31,8 @@
 
         public IBurgerBuilder SetSauceMustard()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Sauce == null)
                 _burger.Sauce = new List<Sauce>() { new Sauce() { Sort = "Горчица" } };
             else
@@ -38,6 +43,8 @@
 
         public IBurgerBuilder SetSauceMayonnaise()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Sauce == null)
                 _burger.Sauce = new List<Sauce>() { new Sauce() { Sort = "Майонез" } };
             else
@@ -47,6 +54,8 @@
         }
         public IBurgerBuilder SetOnion()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Onion == null)
                 _burger.Onion = new() { new Onion { Sort = "Красный" } };
             else
@@ -56,6 +65,8 @@
         }
         public IBurgerBuilder SetLettuceLeaves()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.LettuceLeaves == null)
                 _burger.LettuceLeaves = new() { new LettuceLeaves { Sort = "Айсберг" } };
             else
@@ -66,6 +77,8 @@
 
         public IBurgerBuilder SetCheese()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Cheese == null)
                 _burger.Cheese = new() { new Cheese { Sort = "Пармезан" } };
             else
@@ -75,6 +88,8 @@
         }
         public IBurgerBuilder SetCutletBeef()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Cutlet == null)
                 _burger.Cutlet = new() { new Cutlet { Sort = "Говядина" } };
             else
@@ -85,6 +100,8 @@
 
         public IBurgerBuilder SetCutletChicken()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Cutlet == null)
                 _burger.Cutlet = new() { new Cutlet { Sort = "Кура" } };
             else
@@ -94,6 +111,8 @@
         }
         public IBurgerBuilder SetCucumbers()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Cucumbers == null)
                 _burger.Cucumbers = new() { new Cucumbers { Sort = "Маринованные" } };
             else
@@ -103,6 +122,8 @@
         }
         public IBurgerBuilder SetTomatoes()
         {
+            Thread.Sleep(1000); // имитация работы (взятие со склада, обжарка, назрезка и т.д.)
+
             if (_burger.Tomatoes == null)
                 _burger.Tomatoes = new() { new Tomatoes { Sort = "Розовые" } };
             else

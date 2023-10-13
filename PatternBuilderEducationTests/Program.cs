@@ -6,7 +6,7 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Состав бургера:");
+        Console.WriteLine("Состав готового бургера:");
 
         var burger = new BurgerBuilder();
 

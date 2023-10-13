@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PatternBuilderEducationTests
+﻿namespace PatternBuilderEducationTests
 {
     public class CookerDirector
     {
@@ -17,15 +11,24 @@ namespace PatternBuilderEducationTests
 
         public void BildBurger()
         {
-            Burger
-                .SetBun()
-                .SetCutletBeef()
-                .SetSauceKetchap()
-                .SetSauceMustard()
-                .SetLettuceLeaves()
-                .SetCucumbers()
-                .SetTomatoes()
-                .SetOnion();
+            Parallel.Invoke(
+                () => Burger.SetBun(),
+                () => Burger.SetCutletBeef(),
+                () => Burger.SetSauceKetchap(),
+                () => Burger.SetSauceMustard(),
+                () => Burger.SetLettuceLeaves(),
+                () => Burger.SetCucumbers(),
+                () => Burger.SetTomatoes(),
+                () => Burger.SetOnion()
+                );
+
+
+
+
+
+
+
+
         }
 
 
